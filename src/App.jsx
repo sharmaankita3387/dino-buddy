@@ -6,6 +6,7 @@ import RewardModal from './components/RewardModal';
 import CalendarPage from './pages/CalendarPage';
 import DashboardPage from './pages/DashboardPage';
 import RoadmapPage from './pages/RoadmapPage';
+import TimerPage from './pages/TimerPage';
 
 export default function App() {
   const [theme, setTheme] = useState('candyland');
@@ -196,10 +197,11 @@ export default function App() {
         )}
 
         {activeTab === 'timer' && (
-          <div className="p-6 text-center bg-white/70 rounded-2xl my-auto">
-            <h2 className="font-bold text-lg">⏳ Dual Timer Page</h2>
-            <p className="text-sm opacity-70 mt-1">Coming next!</p>
-          </div>
+         <TimerPage 
+           tasks={tasks} 
+           onToggleTask={toggleTask} 
+           currentTheme={currentTheme} 
+          />
         )}
 
         {activeTab === 'motivation' && (
